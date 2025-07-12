@@ -4,7 +4,7 @@ workflows:
     instance_type: mac_mini_m1
     environment:
       flutter: stable
-      xcode: 15.4.x # Updated to a supported Xcode version
+      xcode: 16.4.x # Updated to Xcode 16.4.x
       cocoapods: 1.12.1
       java: 17
     scripts:
