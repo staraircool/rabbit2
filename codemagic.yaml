@@ -1,11 +1,11 @@
 workflows:
   android-build:
     name: Android Build
-    instance_type: mac_mini_m1
+    instance_type: mac_mini_m2
     working_directory: rabbit_coin_app # Set the working directory for the entire workflow
     environment:
       flutter: stable
-      xcode: 15.1.x
+      xcode: 26.0.x
       cocoapods: 1.12.1
       java: 17
     scripts:
