@@ -4,7 +4,7 @@ workflows:
     instance_type: mac_mini_m1
     environment:
       flutter: stable
-      xcode: 14.3.1
+      xcode: 15.4.x # Updated to a supported Xcode version
       cocoapods: 1.12.1
       java: 17
     scripts:
@@ -17,7 +17,5 @@ workflows:
           flutter build apk --release
     artifacts:
       - build/app/outputs/flutter-apk/*.apk
-    # Removed the publishing section as it was causing validation errors.
-    # If you need publishing, you will need to add specific publishing steps here.
 
 
