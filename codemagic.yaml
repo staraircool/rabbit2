@@ -5,7 +5,7 @@ workflows:
     working_directory: rabbit_coin_app # Set the working directory for the entire workflow
     environment:
       flutter: stable
-      xcode: 16.4.x
+      xcode: 15.0.x
       cocoapods: 1.12.1
       java: 17
     scripts:
