@@ -2,6 +2,7 @@ workflows:
   android-build:
     name: Android Build
     instance_type: mac_mini_m1
+    working_directory: rabbit_coin_app # Set the working directory for the entire workflow
     environment:
       flutter: stable
       xcode: 16.4.x
@@ -10,12 +11,10 @@ workflows:
     scripts:
       - name: Set up Flutter
         script: |
-          cd rabbit_coin_app
           flutter clean
           flutter pub get
       - name: Build Android Release
         script: |
-          cd rabbit_coin_app
           flutter build apk --release
     artifacts:
       - build/app/outputs/flutter-apk/*.apk
