@@ -3,21 +3,17 @@ workflows:
     name: Android Build
     instance_type: mac_mini_m1
     environment:
-      flutter:
-        version: stable
-      xcode:
-        version: 14.3.1
-      cocoapods:
-        version: 1.12.1
-      java:
-        version: 17 # Ensure Java 17 is used for Android builds
+      flutter: stable
+      xcode: 14.3.1
+      cocoapods: 1.12.1
+      java: 17
     scripts:
       - name: Set up Flutter
-        script: | 
+        script: |
           flutter clean
           flutter pub get
       - name: Build Android Release
-        script: | 
+        script: |
           flutter build apk --release
     artifacts:
       - build/app/outputs/flutter-apk/*.apk
